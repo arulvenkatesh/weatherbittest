@@ -72,9 +72,10 @@ namespace weatherbit.Tests
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Get current weather by city postcode.")]
         [NUnit.Framework.CategoryAttribute("mytag")]
-        [NUnit.Framework.TestCaseAttribute("1", "London", "GB", null)]
-        [NUnit.Framework.TestCaseAttribute("2", "Sydney", "AU", null)]
-        public virtual void GetCurrentWeatherByCityPostcode_(string id, string city, string country, string[] exampleTags)
+        [NUnit.Framework.TestCaseAttribute("1", "110012", "Central Delhi", "IN", null)]
+        [NUnit.Framework.TestCaseAttribute("2", "WC2N 5DU", "Greater London", "GB", null)]
+        [NUnit.Framework.TestCaseAttribute("3", "20001", "District of Columbia", "US", null)]
+        public virtual void GetCurrentWeatherByCityPostcode_(string id, string postal_Code, string city, string country, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "mytag"};
@@ -90,11 +91,9 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given("Endpoint \"/forecast/3hourly\" and method Get", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
-                        "City",
-                        "Country"});
+                        "Postal_Code"});
             table1.AddRow(new string[] {
-                        string.Format("{0}", city),
-                        string.Format("{0}", country)});
+                        string.Format("{0}", postal_Code)});
 #line 7
  testRunner.Given("The query parameter with below details added", ((string)(null)), table1, "Given ");
 #line 10

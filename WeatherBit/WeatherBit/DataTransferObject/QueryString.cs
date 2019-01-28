@@ -6,17 +6,14 @@ namespace WeatherBit.DataTransferObject
     {
         string _query = "Key="+ConfigurationBase.ApiKey;
         public string City;
-/*
-        public string Key;
-*/
         public string Country;
-        public string PostCode;
+        public string Postal_Code;
 
         public override string ToString()
         {   
             IgnoreNull("City",City);
             IgnoreNull("Country", Country);
-            IgnoreNull("PostCode", PostCode);
+            IgnoreNull("Postal_Code", Postal_Code);
             return _query;
         }
 
