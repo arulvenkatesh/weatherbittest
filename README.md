@@ -1,5 +1,6 @@
-# weatherbittest
+# WeatherBitTest
 
+This repo runs api test for weatherbit api for 2 scenarios. It tests the current weather of any city using post code and tests the 3 hour forecast of ay city using post code.
 
 ***Test Execution***
 
